@@ -8,24 +8,54 @@
       href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>Refresh Me</h1>
+      <h1 class="display-5 fw-bold mt-5 text-center text-body-emphasis">
+        Refresh Me
+      </h1>
 
-      <div class="dice">
-        <p>Player 1</p>
-        <img class="img1" src="" />
-      </div>
-
-      <div class="dice">
-        <p>Player 2</p>
-        <img class="img2" src="" />
+      <div class="container justify-content-center">
+        <div class="row justify-content-center">
+          <!-- Player One -->
+          <div
+            class="player-one d-flex my-2 col-md-6 col-sm-12 justify-content-center"
+          >
+            <div class="row">
+              <div></div>
+              <h3 class="text-center">Player One</h3>
+              <div class="d-flex justify-content-center">
+                <img id="dice-p-one" src="" alt="dicee" />
+              </div>
+            </div>
+          </div>
+          <!-- Player Two -->
+          <div
+            class="player-two d-flex my-2 col-md-6 col-sm-12 justify-content-center"
+          >
+            <div class="row">
+              <div></div>
+              <h3 class="text-center">Player One</h3>
+              <div class="d-flex justify-content-center">
+                <img id="dice-p-two" src="" alt="dicee" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="script.js"></script>
   </body>
-
-  <footer>www 🎲 App Brewery 🎲 com</footer>
 </html>
