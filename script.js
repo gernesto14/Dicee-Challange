@@ -1,15 +1,13 @@
+//Set Default
+document.getElementById("dice-p-one").src = "../images/dice1.png";
+document.getElementById("dice-p-two").src = "../images/dice1.png";
+
 //Create random numbers 1-6
 function randomNumber() {
   return Math.floor(Math.random() * 6 + 1);
 }
 
-document.getElementById("dice-p-one").src = "../images/dice3.png";
-
-let playerDiceeOne = diceeCase(randomNumber());
-document.getElementById("dice-p-one").src = playerDiceeOne;
-let playerDiceeTwo = diceeCase(randomNumber());
-document.getElementById("dice-p-two").src = playerDiceeTwo;
-
+//Set numbers case for images
 function diceeCase(playerNumber) {
   switch (playerNumber) {
     case 1:
@@ -35,5 +33,27 @@ function diceeCase(playerNumber) {
       break;
   }
 }
+//Roll btn event
+let roll = document.getElementById("roll");
+roll.addEventListener("click", () => {
+  console.log("rolling");
+  //Set players numbers and update img element with players number
+  //Player One Dice
+  let playerDiceeOne = diceeCase(randomNumber());
+  document.getElementById("dice-p-one").src = playerDiceeOne;
+  //Player Two Dice
+  let playerDiceeTwo = diceeCase(randomNumber());
+  document.getElementById("dice-p-two").src = playerDiceeTwo;
 
-console.log();
+  //Announce winner
+  if (playerDiceeOne > playerDiceeTwo) {
+    //Player one wins
+    document.getElementById("header").innerText = "🚩player one wins!";
+  } else if (playerDiceeOne < playerDiceeTwo) {
+    //Player two wins
+    document.getElementById("header").innerText = "player two wins!🚩";
+  } else {
+    //Draw
+    document.getElementById("header").innerText = "Draw!";
+  }
+});
