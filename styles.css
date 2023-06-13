@@ -44,9 +44,18 @@ button#roll {
   border-radius: 5px;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 700px) {
   img {
-    width: 20vh;
+    width: 35%;
     height: auto;
   }
+  h3.text-center {
+  font-size: 6rem;
+}
+#header {
+  font-size: 8rem;
+ }
+ h5.roll {
+  font-size: 3.5rem;
+}
 }
