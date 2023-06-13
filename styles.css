@@ -43,3 +43,10 @@ h5.roll {
 button#roll {
   border-radius: 5px;
 }
+
+@media (max-width: 767px) {
+  img {
+    width: 20vh;
+    height: auto;
+  }
+}
